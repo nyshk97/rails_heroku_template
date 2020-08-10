@@ -1,0 +1,8 @@
+<% provide(:title, "Edit") %>
+<h1>Tests#edit</h1>
+<%= form_with model: @test, local: true do |f| %>
+<div><%= f.label :name %></div>
+<div><%= f.text_field :name %></div>
+<div><%= f.submit %></div>
+<% end %>
+<%= link_to '戻る', tests_path %>
