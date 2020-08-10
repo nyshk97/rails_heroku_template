@@ -1,6 +1,7 @@
 <% provide(:title, "New") %>
 <h1>Tests#new</h1>
 <%= form_with model: @test, local: true do |f| %>
+<%= render 'shared/error_messages', object: f.object %>
 <div><%= f.label :name %></div>
 <div><%= f.text_field :name %></div>
 <div><%= f.submit %></div>
