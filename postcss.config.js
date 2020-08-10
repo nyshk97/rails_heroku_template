@@ -1,7 +1,9 @@
-module.exports = {
+let environment = {
   plugins: [
     require('postcss-import'),
     require('postcss-flexbugs-fixes'),
+    require("tailwindcss"),
+    require("autoprefixer"),
     require('postcss-preset-env')({
       autoprefixer: {
         flexbox: 'no-2009'
@@ -10,3 +12,18 @@ module.exports = {
     })
   ]
 }
+
+if (process.env.RAILS_ENV === "production") {
+  environment.plugins.push(
+    require('@fullhuman/postcss-purgecss')({
+      content: [
+        './app/**/*.html.erb',
+        './app/**/*.js.erb',
+        './app/helpers/**/*.rb',
+      ],
+      defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
+    })
+  )
+}
+
+module.exports = environment

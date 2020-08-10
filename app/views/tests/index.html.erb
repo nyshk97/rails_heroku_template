@@ -1,26 +1,45 @@
 <% provide(:title, "Index") %>
-<h1>Tests#index</h1>
-<% @tests.each do |t| %>
-<div>
-  <%= t.name %>
-  <%= link_to '編集', edit_test_path(t) %>
-  <%= link_to '削除', test_path(t), method: :delete %>
+<div class='mb-8'>
+  <h1>Tests#index</h1>
+  <% @tests.each do |t| %>
+  <div>
+    <%= t.name %>
+    <%= link_to '編集', edit_test_path(t) %>
+    <%= link_to '削除', test_path(t), method: :delete %>
+  </div>
+  <% end %>
+  <%= link_to '追加', new_test_path %>
 </div>
-<% end %>
-<%= link_to '追加', new_test_path %>
 <div>
-  <h3>jqueryのテスト</h3>
+  <h3 class='font-bold'>jqueryのテスト</h3>
   <p id="hoge">jQueryで赤色に変化</p>
 </div>
 <div>
-  <h3>dotenvのテスト</h3>
+  <h3 class='font-bold'>dotenvのテスト</h3>
   <p><%= ENV["DOT_ENV_TEST"] %></p>
 </div>
 <div>
-  <h3>localeのテスト</h3>
+  <h3 class='font-bold'>localeのテスト</h3>
   <p><%= t('datetime.prompts.second') %></p>
   <p><%= t('errors.messages.accepted') %></p>
   <p><%= l(Time.zone.now, format: :long) %></p>
+</div>
+<div>
+  <h3 class='font-bold'>Tailwindのテスト</h3>
+  <div class="max-w-sm bg-white shadow-lg rounded-lg overflow-hidden">
+    <div class="sm:flex sm:items-center px-6 py-4">
+      <img class="block mx-auto sm:mx-0 sm:flex-shrink-0 h-16 sm:h-24 rounded-full"
+        src="https://randomuser.me/api/portraits/women/17.jpg" alt="Woman's Face">
+      <div class="mt-4 sm:mt-0 sm:ml-4 text-center sm:text-left">
+        <p class="text-xl leading-tight">Erin Lindford</p>
+        <p class="text-sm leading-tight text-gray-600">Customer Support Specialist</p>
+        <div class="mt-4">
+          <button
+            class="text-purple-500 hover:text-white hover:bg-purple-500 border border-purple-500 text-xs font-semibold rounded-full px-4 py-1 leading-normal">Message</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script>
