@@ -10,6 +10,7 @@
 <%= link_to '追加', new_test_path %>
 
 <p id="hoge">jQueryで赤色に変化</p>
+<p><%= ENV["DOT_ENV_TEST"] %></p>
 
 <script>
   $(function () {
