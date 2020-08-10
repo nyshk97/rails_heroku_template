@@ -36,6 +36,8 @@ end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
+  gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'listen', '~> 3.2'
   gem 'pre-commit'
   gem 'rspec-rails'
