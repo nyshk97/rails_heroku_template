@@ -1,7 +1,7 @@
+<% provide(:title, "Index") %>
 <h1>Tests#index</h1>
 <% @tests.each do |t| %>
 <div>
-  <i class="far fa-smile-wink"></i>
   <%= t.name %>
   <%= link_to '編集', edit_test_path(t) %>
   <%= link_to '削除', test_path(t), method: :delete %>
