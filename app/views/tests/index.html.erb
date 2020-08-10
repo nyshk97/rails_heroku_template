@@ -8,9 +8,20 @@
 </div>
 <% end %>
 <%= link_to '追加', new_test_path %>
-
-<p id="hoge">jQueryで赤色に変化</p>
-<p><%= ENV["DOT_ENV_TEST"] %></p>
+<div>
+  <h3>jqueryのテスト</h3>
+  <p id="hoge">jQueryで赤色に変化</p>
+</div>
+<div>
+  <h3>dotenvのテスト</h3>
+  <p><%= ENV["DOT_ENV_TEST"] %></p>
+</div>
+<div>
+  <h3>localeのテスト</h3>
+  <p><%= t('datetime.prompts.second') %></p>
+  <p><%= t('errors.messages.accepted') %></p>
+  <p><%= l(Time.zone.now, format: :long) %></p>
+</div>
 
 <script>
   $(function () {
