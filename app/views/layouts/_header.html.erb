@@ -1,3 +1,171 @@
-<header>
-  Header
+<header class="px-2 py-4 relative bg-blue-500">
+  <div class="flex justify-between items-center container mx-ausrc">
+    <div style='width: 200px;' class="hover:opacity-50 cursor-pointer">
+      <a src='#'>
+        <img src="http://placehold.jp/16/eee/999/250x40.png?text=LOGO" alt="">
+      </a>
+    </div>
+    <div class="hidden md:block">
+      <a src='#' class="px-3 hover:text-pink-700 cursor-pointer">メニュー1</a>
+      <a src='#' class="px-3 hover:text-pink-700 cursor-pointer">メニュー2</a>
+      <a src='#' class="px-3 hover:text-pink-700 cursor-pointer">メニュー3</a>
+      <a src='#' class="px-3 hover:text-pink-700 cursor-pointer">メニュー4</a>
+    </div>
+  </div>
+
+  <div class="absolute md:hidden top-0 right-0">
+    <div class="drawer">
+      <input class="drawer__checkbox" id="drawerCheckbox" type="checkbox">
+      <label class="drawer__icon" for="drawerCheckbox">
+        <span class="drawer__icon -parts"></span>
+      </label>
+      <label class="drawer__overlay" for="drawerCheckbox"></label>
+      <nav class="drawer__menu pb-2">
+        <div class="py-3 px-3" style='width: 200px;'>
+          <a src='#'>
+            <img src="http://placehold.jp/16/ddd/999/300x80.png?text=ダミー画像" alt="">
+          </a>
+        </div>
+        <ul>
+          <li class="border-b px-4 py-3 cursor-pointer">
+            <a src='#'>メニュー1</a>
+          </li>
+          <li class="border-b px-4 py-3 cursor-pointer">
+            <a src='#'>メニュー2</a>
+          </li>
+          <li class="border-b px-4 py-3 cursor-pointer">
+            <a src='#'>メニュー3</a>
+          </li>
+          <li class="border-b px-4 py-3 cursor-pointer">
+            <a src='#'>メニュー4</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <style>
+      .drawer {
+        position: relative;
+      }
+
+      .drawer__checkbox {
+        display: none;
+      }
+
+      .drawer__icon {
+        cursor: pointer;
+        display: block;
+        width: 56px;
+        height: 60px;
+        position: fixed;
+        right: 0;
+      }
+
+      .drawer__icon.-parts,
+      .drawer__icon.-parts:before,
+      .drawer__icon.-parts:after {
+        background-color: #000;
+        display: block;
+        width: 26px;
+        height: 2px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        margin: auto;
+      }
+
+      .drawer__icon.-parts:before,
+      .drawer__icon.-parts:after {
+        content: "";
+      }
+
+      .drawer__icon.-parts:before {
+        top: 16px;
+      }
+
+      .drawer__icon.-parts:after {
+        top: -16px;
+      }
+
+      .drawer__overlay {
+        background: #000;
+        opacity: 0;
+        pointer-events: none;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+      }
+
+      .drawer__menu {
+        background: #ffffff;
+        color: #000;
+        max-width: 100%;
+        width: 320px;
+        height: object-fit;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        position: fixed;
+        top: 0;
+        right: -320px;
+      }
+
+      .drawer__icon {
+        z-index: 40;
+      }
+
+      .drawer__menu {
+        z-index: 30;
+      }
+
+      .drawer__overlay {
+        z-index: 20;
+      }
+
+      .drawer__checkbox:checked~.drawer__icon .drawer__icon.-parts {
+        background: transparent;
+      }
+
+      .drawer__checkbox:checked~.drawer__icon .drawer__icon.-parts:before {
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        top: 0;
+      }
+
+      .drawer__checkbox:checked~.drawer__icon .drawer__icon.-parts:after {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        top: 0;
+      }
+
+      .drawer__checkbox:checked~.drawer__overlay {
+        opacity: 0.3;
+        pointer-events: auto;
+      }
+
+      .drawer__checkbox:checked~.drawer__menu {
+        right: 0;
+      }
+
+      .drawer__icon.-parts,
+      .drawer__icon.-parts:after,
+      .drawer__icon.-parts:before,
+      .drawer__overlay,
+      .drawer__menu {
+        -webkit-transition: all 0.7s;
+        transition: all 0.7s;
+      }
+
+      .sp {
+        display: none;
+      }
+
+      @media screen and (max-width: 768px) {
+        .sp {
+          display: block;
+        }
+      }
+    </style>
 </header>
