@@ -40,6 +40,7 @@ group :development do
   gem 'binding_of_caller'
   gem 'listen', '~> 3.2'
   gem 'pre-commit'
+  gem 'pry-rails'
   gem 'rspec-rails'
   gem 'rubocop'
   gem 'rubocop-rails'
