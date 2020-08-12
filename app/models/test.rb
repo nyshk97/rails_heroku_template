@@ -1,3 +1,3 @@
 class Test < ApplicationRecord
-  validates :name, length: { minimum: 30 }, presence: true
+  validates :name, length: { minimum: 5 }, presence: true
 end

@@ -1,0 +1,23 @@
+<% flash.each do |message_type, message| %>
+<div class="flash w-full <%= message_type %>">
+  <div class='container mx-auto'>
+    <input type="checkbox" class="hidden" id="flash">
+    <label class="cursor-pointer block py-2 text-white" for="flash">
+      <%= message %>
+    </label>
+  </div>
+</div>
+<% end %>
+<style>
+  .flash input:checked~* {
+    display: none;
+  }
+
+  .notice {
+    background-color: #4fd1c5;
+  }
+
+  .alert {
+    background-color: #fc8181;
+  }
+</style>

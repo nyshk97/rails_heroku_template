@@ -10,7 +10,7 @@ class TestsController < ApplicationController
   def create
     @test = Test.new(test_params)
     if @test.save
-      redirect_to tests_url
+      redirect_to tests_url, notice: '作成しました'
     else
       render 'tests/new'
     end
@@ -23,7 +23,7 @@ class TestsController < ApplicationController
   def update
     @test = Test.find(params[:id])
     if @test.update(test_params)
-      redirect_to tests_url
+      redirect_to tests_url, notice: '編集しました'
     else
       render 'tests/edit'
     end

@@ -1,9 +1,9 @@
 <header class="px-2 py-4 relative bg-blue-500">
-  <div class="flex justify-between items-center container mx-ausrc">
+  <div class="flex justify-between items-center container mx-auto">
     <div style='width: 200px;' class="hover:opacity-50 cursor-pointer">
-      <a src='#'>
-        <img src="http://placehold.jp/16/eee/999/250x40.png?text=LOGO" alt="">
-      </a>
+      <%= link_to(root_url) do %>
+      <img src="http://placehold.jp/16/eee/999/250x40.png?text=LOGO" alt="">
+      <% end %>
     </div>
     <div class="hidden md:block">
       <a src='#' class="px-3 hover:text-pink-700 cursor-pointer">メニュー1</a>

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  # root to: 'tests#index'
+  root to: 'tests#index'
   resources :tests
   # resources :tasks, only: %i[new create edit update]
   # resources :products do
