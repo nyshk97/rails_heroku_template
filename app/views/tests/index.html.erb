@@ -4,6 +4,7 @@
   <% @tests.each do |t| %>
   <div>
     <%= t.name %>
+    <%= l(t.created_at) %>
     <%= link_to '編集', edit_test_path(t) %>
     <%= link_to '削除', test_path(t), method: :delete %>
   </div>
@@ -41,7 +42,12 @@
     </div>
   </div>
 </div>
-
+<p>
+  Time.now:<%= Time.now %>
+</p>
+<p>
+  Time.zone.now:<%= Time.zone.now %>
+</p>
 <script>
   $(function () {
     $("#hoge").css("color", "red");
