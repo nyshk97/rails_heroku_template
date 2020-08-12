@@ -1,0 +1,15 @@
+ja:
+  activerecord:
+    models:
+      test: テスト
+      # user: ユーザー
+    attributes:
+        test:
+          name: タスク名
+        # user:
+        #   email: メールアドレス
+        #   password: パスワード
+  attributes:
+    id: ID
+    created_at: 作成日
+    updated_at: 更新日
