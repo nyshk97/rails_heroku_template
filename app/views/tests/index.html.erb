@@ -1,15 +1,15 @@
 <% provide(:title, "Index") %>
 <div class='mb-8'>
   <h1>Tests#index</h1>
-  <% @tests.each do |t| %>
+  <% @tests.each_with_index do |t, index| %>
   <div>
     <%= t.name %>
     <%= l(t.created_at) %>
-    <%= link_to '編集', edit_test_path(t) %>
-    <%= link_to '削除', test_path(t), method: :delete %>
+    <%= link_to '編集', edit_test_path(t), 'data-testid': "edit#{index}" %>
+    <%= link_to '削除', test_path(t), method: :delete, 'data-testid': "delete#{index}" %>
   </div>
   <% end %>
-  <%= link_to '追加', new_test_path %>
+  <%= link_to '追加', new_test_path, 'data-testid': 'add' %>
 </div>
 <div>
   <h3 class='font-bold'>jqueryのテスト</h3>
