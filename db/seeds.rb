@@ -15,3 +15,14 @@ Test.create!(
     }
   ]
 )
+test = Test.first
+test.test_children.create!(
+  [
+    {
+      name: '家を出る'
+    },
+    {
+      name: 'コンビニに行く'
+    }
+  ]
+)
