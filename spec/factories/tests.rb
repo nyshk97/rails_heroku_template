@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :test do
-    name { 'MyString' }
+    name { '牛乳を買う' }
   end
 end
