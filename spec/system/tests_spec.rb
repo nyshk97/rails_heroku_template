@@ -9,26 +9,26 @@ RSpec.describe 'Tests', type: :system do
 
   it 'タスク(test)を追加' do
     visit tests_path
-    find("[data-testid='add']").click
+    find(:test_id, 'add').click
     expect do
-      find("[data-testid='name']").set('ジムに行く')
-      find("[data-testid='submit']").click
+      find(:test_id, 'name').set('ジムに行く')
+      find(:test_id, 'submit').click
     end.to change(Test.all, :count).by(1)
   end
 
   it 'タスク(test)を編集' do
     visit tests_path
     expect(page).to_not have_content 'タスク名を編集した'
-    find("[data-testid='edit0']").click
-    find("[data-testid='name']").set('タスク名を編集した')
-    find("[data-testid='submit']").click
+    find(:test_id, 'edit0').click
+    find(:test_id, 'name').set('タスク名を編集した')
+    find(:test_id, 'submit').click
     expect(page).to have_content 'タスク名を編集した'
   end
 
   it 'タスク(test)を削除' do
     visit tests_path
     expect do
-      find("[data-testid='delete0']").click
+      find(:test_id, 'delete0').click
     end.to change(Test.all, :count).by(-1)
   end
 end
