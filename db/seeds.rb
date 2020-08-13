@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Test.create!(
+  [
+    {
+      name: 'パンを買う'
+    },
+    {
+      name: '牛乳を買う'
+    }
+  ]
+)
