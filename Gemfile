@@ -45,6 +45,7 @@ group :development do
   gem 'listen', '~> 3.2'
   gem 'pre-commit'
   gem 'pry-rails'
+  gem 'rails_best_practices'
   gem 'rspec-rails'
   gem 'rubocop'
   gem 'rubocop-rails'
