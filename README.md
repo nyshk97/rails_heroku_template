@@ -1,4 +1,7 @@
+## 開発環境をセットアップ
 Use this templateからリポジトリを複製
+
+### Docker環境の整備
 ```zsh
 $ git clone https://github.com/nyshk97/project_name.git
 $ cd project_name
@@ -12,9 +15,11 @@ $ docker-compose exec web rails db:seed
 ```
 http:0.0.0.0:3000 にアクセスして表示を確認
 Ctrl + Cでdocker-composeを終了
-VSCode左下のマーク > Reopen in ContainerでVSCode Remote Containerを開く
-機能の確認
 
+### VSCode Remote Developmentの設定
+VSCode左下のマーク > Reopen in ContainerでVSCode Remote Containerを開く
+
+###機能の確認
 - Tailwind
 - jquery
 - 環境変数
@@ -25,6 +30,7 @@ VSCode左下のマーク > Reopen in ContainerでVSCode Remote Containerを開�
 - flash
 - better_errors
 
+### 秘匿情報の保護
 envとdatabase.ymlをgit管理から外す
 
 ```
@@ -42,6 +48,8 @@ $ git add -A
 $ git commit
 $ git push origin master
 ```
+
+### Herokuアプリを作成
 ```zsh
 $ heroku login --
 heroku: Enter your login credentials
@@ -55,11 +63,13 @@ $ git push heroku master
 ```
 https://app-name.herokuapp.com/ にアクセスして表示を確認
 
-TablePlusでローカルと本番のDBに接続
-ローカルはdatabase.ymlを参照
+### TablePlusでDBに接続
+#### dev
+database.ymlを参照
+#### 本番
 本番は Heroku管理画面 > Resources > HerokuPostgres > Settings > View Credencials を参照
 
-DBのタイムゾーンを変更
+### DBのタイムゾーンを変更
 それぞれのDBで以下を実行
 
 ```sql
@@ -69,5 +79,6 @@ ALTER DATABASE db_name SET timezone TO 'Asia/Tokyo';
 
 再接続して、タイムゾーンが日本時間になっていることを確認
 
+### 本番環境のログを管理
 Papertrailを導入
 Resources > Add ons からPatertrailsを検索して有効化
