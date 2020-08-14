@@ -82,3 +82,11 @@ ALTER DATABASE db_name SET timezone TO 'Asia/Tokyo';
 ### 本番環境のログを管理
 Papertrailを導入
 Resources > Add ons からPatertrailsを検索して有効化
+
+### Git Hooksの設定
+Commit時にRubocopとRailsBestPractices
+Push時にBrakemanとRSpec
+が走るように設定
+```zsh
+hoge
+```
