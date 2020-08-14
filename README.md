@@ -19,7 +19,7 @@ Ctrl + Cでdocker-composeを終了
 ### VSCode Remote Developmentの設定
 VSCode左下のマーク > Reopen in ContainerでVSCode Remote Containerを開く
 
-###機能の確認
+### 機能の確認
 - Tailwind
 - jquery
 - 環境変数
