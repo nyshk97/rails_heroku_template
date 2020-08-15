@@ -32,6 +32,14 @@ http://0.0.0.0:3000 にアクセスして表示を確認
 - flash
 - better_errors
 
+### テストツール、解析ツールの動作確認
+```zsh
+$ rubocop
+$ rails_best_practices .
+$ brakeman
+$ bin/rspec
+```
+
 ### 秘匿情報の保護
 envとdatabase.ymlをgit管理から外す
 
@@ -49,6 +57,11 @@ config/database.yml
 $ git add -A
 $ git commit
 $ git push origin master
+```
+
+### pre-commit, pre-pushの設定
+```zsh
+$ pre-commit install
 ```
 
 ### Herokuアプリを作成
