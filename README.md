@@ -15,6 +15,7 @@
 - flash
 - ページごとにタイトルを設定する関数
 - 最低限のCRUD
+- ヘッダー、フッターのスタイリング
 - Bullet
 - Rubocop
 - RailsBestPractices
