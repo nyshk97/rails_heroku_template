@@ -66,7 +66,7 @@ http://0.0.0.0:3000 にアクセスして表示を確認
 ### テストツール、解析ツールの動作確認
 ```zsh
 $ rubocop
-$ rails_best_practices .
+$ rails_best_practices
 $ brakeman
 $ bin/rspec
 ```
