@@ -143,4 +143,27 @@ Papertrailを導入
 Resources > Add ons からPatertrailsを検索して有効化
 
 ## 本番公開時の設定
-Coming soon
+### アドオンを追加
+- BugSnag
+- Scout or NewRelic
+### Heroku Flowの設定
+- Heroku pipeline
+- Heroku chatops
+### gzip配信
+### Cloudflareの設定
+- DNS
+- SSL有効化
+- URL正規化
+- ブラウザにキャッシュさせる時間を調整
+### その他
+- favicon
+- meta description
+- ogp
+
+## オプション
+- 無料プランでもスリープしないようにする
+- 画像をCloudinaryで最適化して配信
+- GoogleAnalytics
+- 利用規約
+- プライバシーポリシー
+- 404ページ
