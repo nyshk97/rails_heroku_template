@@ -14,6 +14,9 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
+  ENV['RAILS_ENV'] ||= 'test'
+  require File.expand_path('../config/environment', __dir__)
+  require 'rspec/rails'
   Capybara.add_selector(:test_id) do
     css { |val| %([data-testid="#{val}"]) }
   end
