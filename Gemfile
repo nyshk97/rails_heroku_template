@@ -43,6 +43,7 @@ group :development do
   gem 'brakeman'
   gem 'bullet'
   gem 'listen', '~> 3.2'
+  gem 'overcommit'
   gem 'pre-commit'
   gem 'pry-rails'
   gem 'rails_best_practices'
