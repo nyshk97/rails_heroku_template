@@ -122,10 +122,11 @@ $ git push heroku master
 https://app-name.herokuapp.com/ にアクセスして表示を確認
 
 ### TablePlusでDBに接続
-#### dev
+**dev**
 database.ymlを参照
-#### 本番
-本番は Heroku管理画面 > Resources > HerokuPostgres > Settings > View Credencials を参照
+
+**本番**
+Heroku管理画面 > Resources > HerokuPostgres > Settings > View Credencials を参照
 
 ### DBのタイムゾーンを変更
 それぞれのDBで以下を実行
