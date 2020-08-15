@@ -2,13 +2,11 @@
 ### Use this templateからリポジトリを複製
 <img width="1440" alt=" 2020-08-15 18 29 37" src="https://user-images.githubusercontent.com/38527299/90309677-78b2f700-df25-11ea-9ffb-f9174eb43931.png">
 
-### バージョンの選択
-`Dockerfile`、`Gemfile`を編集、RubyとRailsの好きなバージョンを選択
-
 ### Docker環境の整備
 ```zsh
 $ git clone https://github.com/nyshk97/project_name.git
 $ cd project_name
+# 必要に応じてRubyやRailsのバージョンを変更
 $ docker-compose run web rails new . --force --no-deps --database=postgresql --skip-test
 $ docker-compose build
 $ docker-compose run web yarn upgrade
