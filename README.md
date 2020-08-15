@@ -1,5 +1,9 @@
 ## 開発環境をセットアップ
-Use this templateからリポジトリを複製
+### Use this templateからリポジトリを複製
+<img width="1440" alt=" 2020-08-15 18 29 37" src="https://user-images.githubusercontent.com/38527299/90309677-78b2f700-df25-11ea-9ffb-f9174eb43931.png">
+
+### バージョンの選択
+`Dockerfile`、`Gemfile`を編集、RubyとRailsの好きなバージョンを選択
 
 ### Docker環境の整備
 ```zsh
@@ -59,10 +63,21 @@ $ git commit
 $ git push origin master
 ```
 
-### pre-commit, pre-pushの設定
+### overcommitの設定
 ```zsh
-$ pre-commit install
+$ overcommit --sign
 ```
+**Rubocop**
+適当なcontrollerに`Time.now`を埋め込んでCommit
+
+**RailsBestPractices**
+適当なmodelに`default_scope order(created_at: :desc)`をセットしてCommit
+
+**Brakeman**
+適当なcontrollerに`http_basic_authenticate_with name: 'ID', password: 'password'`をセットしてPush
+
+**RSpec**
+パスしないテストを書いてPush
 
 ### Herokuアプリを作成
 ```zsh
