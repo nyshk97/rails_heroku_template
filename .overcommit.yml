@@ -14,8 +14,19 @@
 # https://github.com/sds/overcommit#configuration
 #
 # Uncomment the following lines to make the configuration take effect.
+CommitMsg:
+  ALL:
+    enabled: false
 PreCommit:
+  AuthorEmail:
+    enabled: false
   AuthorName:
+    enabled: false
+  BrokenSymlinks:
+    enabled: false
+  CaseConflicts:
+    enabled: false
+  MergeConflicts:
     enabled: false
   RuboCop:
     enabled: true
