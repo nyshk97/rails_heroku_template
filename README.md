@@ -13,11 +13,12 @@ $ docker-compose exec web rails db:create
 $ docker-compose exec web rails db:migrate
 $ docker-compose exec web rails db:seed
 ```
-http:0.0.0.0:3000 にアクセスして表示を確認
+http://0.0.0.0:3000 にアクセスして表示を確認
 Ctrl + Cでdocker-composeを終了
 
 ### VSCode Remote Developmentの設定
 VSCode左下のマーク > Reopen in ContainerでVSCode Remote Containerを開く
+http://0.0.0.0:3000 にアクセスして表示を確認
 
 ### 機能の確認
 - Tailwind
