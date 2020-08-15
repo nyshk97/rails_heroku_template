@@ -1,4 +1,33 @@
-## 開発環境をセットアップ
+## 含まれているもの
+- Docker開発環境
+- VSCode Remote Development
+- better_errors、binding_of_caller
+- pry
+- dotenv
+- locale
+- gitignore
+- Tailwind CSS
+- jQuery
+- プログラムのタイムゾーン設定
+- viewportの設定
+- `rails g`で生成されるファイルの制御
+- フォームのエラーメッセージ
+- flash
+- ページごとにタイトルを設定する関数
+- 最低限のCRUD
+- Bullet
+- Rubocop
+- RailsBestPractices
+- Brakeman
+- RSpec
+  - FactoryBot
+  - Capybara
+  - Chrome Web Driver
+- overcommit
+- precompileの設定
+- Procfile
+
+## セットアップ
 ### Use this templateからリポジトリを複製
 <img width="1440" alt=" 2020-08-15 18 29 37" src="https://user-images.githubusercontent.com/38527299/90309677-78b2f700-df25-11ea-9ffb-f9174eb43931.png">
 
@@ -52,6 +81,7 @@ $ git rm -r --cached .env
 $ git rm -r --cached config/database.yml
 ```
 ```.gitignore
+# .gitignore
 .env
 config/database.yml
 ```
@@ -79,7 +109,7 @@ $ overcommit --sign
 
 ### Herokuアプリを作成
 ```zsh
-$ heroku login --
+$ heroku login --interactive
 heroku: Enter your login credentials
 Email: hogehoge@gmail.com
 Password: **************
@@ -111,6 +141,5 @@ ALTER DATABASE db_name SET timezone TO 'Asia/Tokyo';
 Papertrailを導入
 Resources > Add ons からPatertrailsを検索して有効化
 
-## 含まれているもの
-
 ## 本番公開時の設定
+Coming soon
