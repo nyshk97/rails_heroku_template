@@ -32,7 +32,7 @@ class TestsController < ApplicationController
   def destroy
     @test = Test.find(params[:id])
     @test.destroy
-    redirect_to tests_url
+    redirect_to tests_url, notice: 'タスクを削除しました'
   end
 
   private
