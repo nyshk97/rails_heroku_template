@@ -18,7 +18,6 @@
 - ヘッダー、フッターのスタイリング
 - Bullet
 - Rubocop
-- RailsBestPractices
 - Brakeman
 - RSpec
   - FactoryBot
@@ -67,7 +66,6 @@ http://0.0.0.0:3000 にアクセスして表示を確認
 ### テストツール、解析ツールの動作確認
 ```zsh
 $ rubocop
-$ rails_best_practices
 $ brakeman
 $ bin/rspec
 ```
@@ -98,9 +96,6 @@ $ overcommit --sign
 ```
 **Rubocop**
 適当なcontrollerに`Time.now`を埋め込んでCommit
-
-**RailsBestPractices**
-適当なmodelに`default_scope order(created_at: :desc)`をセットしてCommit
 
 **Brakeman**
 適当なcontrollerに`http_basic_authenticate_with name: 'ID', password: 'password'`をセットしてPush
