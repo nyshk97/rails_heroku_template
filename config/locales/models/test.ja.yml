@@ -1,0 +1,7 @@
+ja:
+  activerecord:
+    models:
+      test: テスト
+    attributes:
+        test:
+          name: タスク名
