@@ -1,32 +1,3 @@
-## 含まれているもの
-- Docker開発環境
-- VSCode Remote Development
-- better_errors、binding_of_caller
-- pry
-- dotenv
-- locale
-- gitignore
-- Tailwind CSS
-- jQuery
-- プログラムのタイムゾーン設定
-- viewportの設定
-- `rails g`で生成されるファイルの制御
-- フォームのエラーメッセージ
-- flash
-- ページごとにタイトルを設定する関数
-- 最低限のCRUD
-- ヘッダー、フッターのスタイリング
-- Bullet
-- Rubocop
-- Brakeman
-- RSpec
-  - FactoryBot
-  - Capybara
-  - Chrome Web Driver
-- overcommit
-- precompileの設定
-- Procfile
-
 ## セットアップ
 ### Use this templateからリポジトリを複製
 <img width="1440" alt=" 2020-08-15 18 29 37" src="https://user-images.githubusercontent.com/38527299/90309677-78b2f700-df25-11ea-9ffb-f9174eb43931.png">
@@ -155,6 +126,35 @@ Resources > Add ons からPatertrailsを検索して有効化
 - favicon
 - meta description
 - ogp
+
+## 含まれているもの
+- Docker開発環境
+- VSCode Remote Development
+- better_errors、binding_of_caller
+- pry
+- dotenv
+- locale
+- gitignore
+- Tailwind CSS
+- jQuery
+- プログラムのタイムゾーン設定
+- viewportの設定
+- `rails g`で生成されるファイルの制御
+- フォームのエラーメッセージ
+- flash
+- ページごとにタイトルを設定する関数
+- 最低限のCRUD
+- ヘッダー、フッターのスタイリング
+- Bullet
+- Rubocop
+- Brakeman
+- RSpec
+  - FactoryBot
+  - Capybara
+  - Chrome Web Driver
+- overcommit
+- precompileの設定
+- Procfile
 
 ## オプション
 - 無料プランでもスリープしないようにする
