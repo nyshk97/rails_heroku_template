@@ -1,4 +1,5 @@
 class TestsController < ApplicationController
+  before_action :find_test, only: %i[edit update destroy]
   def index
     @tests = Test.all
   end
@@ -12,25 +13,21 @@ class TestsController < ApplicationController
     if @test.save
       redirect_to tests_url, notice: 'タスクを追加しました'
     else
-      render 'tests/new'
+      render :new
     end
   end
 
-  def edit
-    @test = Test.find(params[:id])
-  end
+  def edit; end
 
   def update
-    @test = Test.find(params[:id])
     if @test.update(test_params)
       redirect_to tests_url, notice: 'タスクを編集しました'
     else
-      render 'tests/edit'
+      render :edit
     end
   end
 
   def destroy
-    @test = Test.find(params[:id])
     @test.destroy
     redirect_to tests_url, notice: 'タスクを削除しました'
   end
@@ -39,5 +36,9 @@ class TestsController < ApplicationController
 
   def test_params
     params.require(:test).permit(:name)
+  end
+
+  def find_test
+    @test = Test.find(params[:id])
   end
 end
