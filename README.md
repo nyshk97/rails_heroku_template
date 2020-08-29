@@ -63,6 +63,7 @@ $ git push origin master
 
 ### overcommitの設定
 ```zsh
+$ overcommit --install
 $ overcommit --sign
 ```
 **Rubocop**
