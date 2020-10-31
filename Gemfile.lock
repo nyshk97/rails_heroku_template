@@ -101,6 +101,8 @@ GEM
     ffi (1.13.1)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    heroku-deflater (0.6.3)
+      rack (>= 1.4.5)
     i18n (1.8.5)
       concurrent-ruby (~> 1.0)
     iniparse (1.5.0)
@@ -283,6 +285,7 @@ DEPENDENCIES
   capybara
   dotenv-rails
   factory_bot_rails
+  heroku-deflater
   jbuilder (~> 2.7)
   listen (~> 3.2)
   overcommit
@@ -305,7 +308,7 @@ DEPENDENCIES
   webpacker (~> 4.0)
 
 RUBY VERSION
-   ruby 2.7.1p83
+   ruby 2.7.2p137
 
 BUNDLED WITH
    2.1.4
