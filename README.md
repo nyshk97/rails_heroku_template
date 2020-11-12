@@ -9,7 +9,7 @@ $ cd project_name
 # 必要に応じてRubyやRailsのバージョンを変更
 $ docker-compose run web rails new . --force --no-deps --database=postgresql --skip-test
 $ docker-compose build
-$ docker-compose run web yarn upgrade
+$ docker-compose run web yarn upgrade #キャッシュが原因でこける場合あり。こけたらtmp/cacheを削除して対応
 $ docker-compose up
 $ docker-compose exec web rails db:create
 $ docker-compose exec web rails db:migrate
