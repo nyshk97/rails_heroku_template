@@ -117,7 +117,6 @@ Resources > Add ons からPatertrailsを検索して有効化
 ### Heroku Flowの設定
 - Heroku pipeline
 - Heroku chatops
-### gzip配信
 ### Cloudflareの設定
 - DNS
 - SSL有効化
@@ -156,6 +155,7 @@ Resources > Add ons からPatertrailsを検索して有効化
 - overcommit
 - precompileの設定
 - Procfile
+- GZip圧縮
 
 ## オプション
 - 無料プランでもスリープしないようにする
