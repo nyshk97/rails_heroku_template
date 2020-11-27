@@ -30,6 +30,10 @@ Style/HashTransformValues:
 Style/AsciiComments:
   Enabled: false
 
+# Admin::HogeControllerを許可
+Style/ClassAndModuleChildren:
+  Enabled: false
+
 # ドキュメントの無いpublic classを許可する
 Style/Documentation:
   Enabled: false
