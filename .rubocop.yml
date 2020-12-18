@@ -50,6 +50,12 @@ Style/FrozenStringLiteralComment:
 Style/RedundantSelf:
   Enabled: false
 
+# factoryの中ではダブルクォートを許可
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+  Exclude:
+    - "spec/factories/*.rb"
+
 ##################### Lint ##################################
 
 ##################### Metrics ##################################
